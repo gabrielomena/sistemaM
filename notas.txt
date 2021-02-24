@@ -1,0 +1,25 @@
+    public function index(){
+        $partidos= Partido::all();
+        return view("admin.partidos", compact('partidos'));
+    }
+
+
+
+
+
+
+{{route('partidos.edit',['id'=>$p->id])}}
+
+{{route('partidos.create')}}
+
+
+
+
+    <h1>Painel</h1>
+    <label for="cars">Selecione o Municipio:</label>
+
+    <select>
+        @foreach($municipios as $m)
+        <option value="{{$m->id}}">{{$m->nome}}</option>
+        @endforeach
+    </select>
