@@ -5,7 +5,7 @@
         <div class="text-info">
             <h1>Alterar Cadastro do Partido</h1>
         </div>
-        <form method="post" action="{{route('partidos.edit')}}">
+        <form method="" action="">
             @csrf
             <table class="table table-sm">
                 <thead>

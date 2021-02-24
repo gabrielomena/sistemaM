@@ -37,6 +37,7 @@ class PartidosController extends Controller
     public function store(Request $request)
     {
         $partido = Partido::create($request->all());
+
    /*     try {
             $partido = Partido::create([
                 'sigla' => $request->sigla,
@@ -75,7 +76,7 @@ class PartidosController extends Controller
     public function edit(Partido $partido)
     {
         /*dd($partido);*/
-        return view(admin.partidosForm);
+        return view(admin.partidosFormAlt);
     }
 
     /**
@@ -96,10 +97,10 @@ class PartidosController extends Controller
      * @param  \App\Partido  $partido
      * @return \Illuminate\Http\Response
      */
-    public function delete(Partido $partido)
+    public function destroy(Partido $partido)
     {
-        dd($partido);
+/*        dd($partido);*/
         $partido->delete();
-        return redirect()->route('partidos');
+        return redirect()->route('partidos.index');
     }
 }

@@ -23,8 +23,15 @@
                     <td>{{$p->sigla}}</td>
                     <td>{{$p->descricao}}</td>
                     <td>
-                        <a class="btn btn-primary" id="" href="{{route('partidos.edit',$p)}}" role="button">EDITAR</a>
-                        <a class="btn btn-danger" href="{{route('partidos.delete',$p)}}" role="button">DELETAR</a>
+                        <span class="form-inline">
+                        <a class="btn btn-primary mr-1 ml-1" title="EDITAR" href="{{route('partidos.edit',$p)}}" role="button"><span class="fa fa-edit"></span></a>
+                            <form action="{{route('partidos.destroy',$p)}}" method="post" class="mr-1 ml-1">
+                                @csrf
+                                @method('delete')
+                                <input type="hidden" name="id" value="${{$p->id}}">
+                                <button class="btn btn-danger" title="DELETE" onclick="return confirm('Tem Certeza?')" type="submit"><span class="fa fa-trash"></span></button>
+                            </form>
+                        </span>
                     </td>
                 </tr>
             @endforeach
