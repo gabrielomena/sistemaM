@@ -25,7 +25,7 @@ class MunicipiosController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -36,7 +36,7 @@ class MunicipiosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
     }
 
     /**
@@ -79,8 +79,8 @@ class MunicipiosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Municipio $municipio)
     {
-        //
+
     }
 }
