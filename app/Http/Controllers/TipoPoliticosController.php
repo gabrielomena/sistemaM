@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Partido;
+use App\TipoPoliticos;
 use Illuminate\Http\Request;
 
-class PartidosController extends Controller
+class TipoPoliticosController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class PartidosController extends Controller
      */
     public function index()
     {
-        $partidos= Partido::all();
-        return view("admin.partidos", compact('partidos'));
+        $tipo_politicos= TipoPoliticos::all();
+        return view('admin.autoridadesForm', compact('tipo_politicos'));
     }
 
     /**
@@ -25,7 +25,7 @@ class PartidosController extends Controller
      */
     public function create()
     {
-        return view('admin.partidosForm');
+        //
     }
 
     /**
@@ -36,57 +36,51 @@ class PartidosController extends Controller
      */
     public function store(Request $request)
     {
-        $partido = Partido::create($request->all());
-        return redirect()->route('partidos.index');
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Partido  $partido
+     * @param  \App\TipoPoliticos  $tipoPoliticos
      * @return \Illuminate\Http\Response
      */
-    public function show(Partido $partido)
+    public function show(TipoPoliticos $tipoPoliticos)
     {
-
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Partido  $partido
+     * @param  \App\TipoPoliticos  $tipoPoliticos
      * @return \Illuminate\Http\Response
      */
-    public function edit(int $id)
+    public function edit(TipoPoliticos $tipoPoliticos)
     {
-        $partido= Partido::find($id);
-        return view('admin.partidosFormAlt', compact('partido'));
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Partido  $partido
+     * @param  \App\TipoPoliticos  $tipoPoliticos
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request,int $id)
+    public function update(Request $request, TipoPoliticos $tipoPoliticos)
     {
-        $partido= Partido::find($id);
-        $partido->update($request->all());
-        return redirect()->route('partidos.index');
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Partido  $partido
+     * @param  \App\TipoPoliticos  $tipoPoliticos
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Partido $partido)
+    public function destroy(TipoPoliticos $tipoPoliticos)
     {
-/*        dd($partido);*/
-        $partido->delete();
-        return redirect()->route('partidos.index');
+        //
     }
 }

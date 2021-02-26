@@ -5,8 +5,9 @@
         <div class="text-info">
             <h1>Alterar Cadastro do Partido</h1>
         </div>
-        <form method="" action="">
+        <form method="post" action="{{route('partidos.update',$partido->id)}}">
             @csrf
+            @method('put')
             <table class="table table-sm">
                 <thead>
                 <tr>
@@ -16,8 +17,9 @@
                 </tr>
                 </thead>
                 <tr>
-                    <td><input type="text" class="form-control" name="sigla" id="sigla" required></td>
-                    <td><input type="text" class="form-control" name="descricao" id="descricao" required></td>
+                    {{$partido}}
+                    <td><input  value="{{$partido->sigla}}" type="text" class="form-control" name="sigla" id="sigla" required></td>
+                    <td><input value="{{$partido->descricao}}" type="text" class="form-control" name="descricao" id="descricao" required></td>
                     <td>
                         <button class="btn btn-primary" type="submit">SALVAR</button>
                         <a class="btn btn-danger" href="/partidos">CANCELAR</a>

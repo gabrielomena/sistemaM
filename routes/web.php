@@ -23,6 +23,7 @@ Route::get('/admin/login', 'AuthController@login')->name('admin.login');
 
 Route::resources([
     'partidos'=>'PartidosController',
-    'municipios'=>'MunicipiosController'
+    'municipios'=>'MunicipiosController',
+    'autoridades'=>'AutoridadesController'
 ]);
 

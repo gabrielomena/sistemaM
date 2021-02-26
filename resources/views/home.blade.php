@@ -15,7 +15,7 @@
                         <div class="card" style="width: 18rem;">
                             <div class="card-body">
                                 <h5 class="card-title">MUNICÍPIOS</h5>
-                                <p class="card-text">Cadastre, edite ou exclua municípios no sistema.</p>
+                                <p class="card-text">Exibe a lista municípios.</p>
                                 <a href="/municipios" class="btn btn-primary">LISTAR</a>
                             </div>
                         </div>
@@ -23,14 +23,14 @@
                             <div class="card-body">
                                 <h5 class="card-title">PARTIDOS</h5>
                                 <p class="card-text">Cadastre, edite ou exclua partidos no sistema.</p>
-                                <a href="/partidos" class="btn btn-primary">LISTAR</a>
+                                <a href="/partidos" class="btn btn-primary">GERENCIAR</a>
                             </div>
                         </div>
                         <div class="card" style="width: 18rem;">
                             <div class="card-body">
-                                <h5 class="card-title">POLÍTICOS</h5>
-                                <p class="card-text">Cadastre, edite ou exclua políticos no sistema.</p>
-                                <a href="" class="btn btn-primary">LISTAR</a>
+                                <h5 class="card-title">AUTORIDADES</h5>
+                                <p class="card-text">Cadastre, edite ou exclua autoridades no sistema.</p>
+                                <a href="/autoridades" class="btn btn-primary">GERENCIAR</a>
                             </div>
                         </div>
                     </div>
