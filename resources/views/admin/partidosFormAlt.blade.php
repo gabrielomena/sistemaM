@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <div class="text-info">
-            <h1>Alterar Cadastro do Partido</h1>
+            <h1>Alterar registro do Partido</h1>
         </div>
         <form method="post" action="{{route('partidos.update',$partido->id)}}">
             @csrf
@@ -17,7 +17,6 @@
                 </tr>
                 </thead>
                 <tr>
-                    {{$partido}}
                     <td><input  value="{{$partido->sigla}}" type="text" class="form-control" name="sigla" id="sigla" required></td>
                     <td><input value="{{$partido->descricao}}" type="text" class="form-control" name="descricao" id="descricao" required></td>
                     <td>

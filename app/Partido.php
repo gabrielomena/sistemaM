@@ -8,7 +8,7 @@ class Partido extends Model
 {
 protected $fillable=['sigla','descricao'];
 
-    public function autoridades()
+    public function autoridade()
     {
         return $this->hasMany(Autoridade::class);
     }

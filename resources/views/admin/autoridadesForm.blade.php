@@ -32,7 +32,7 @@
                         <label for="tipo_id">CARGO</label>
                         <select class="form-control" id="tipo_id" name="tipo_id" required>
                             <option value="" selected disabled hidden>Selecione</option>
-                            @foreach($tipo_politicos as $tp)
+                            @foreach($cargos as $tp)
                                 <option value="{{$tp->id}}">{{$tp->cargo}}</option>
                             @endforeach
                         </select>

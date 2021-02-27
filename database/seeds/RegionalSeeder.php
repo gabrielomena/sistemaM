@@ -11,7 +11,7 @@ class RegionalSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('')->insert([
+        DB::table('regionals')->insert([
             ["nome"=>"Alto Solimões",
             "sigla"=>"AS"],
             ["nome"=>"Médio Amazonas",

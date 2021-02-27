@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class TipoPoliticosSeeder extends Seeder
+class CargosSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,7 +11,7 @@ class TipoPoliticosSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('tipo_politicos')->insert([
+        DB::table('cargos')->insert([
            ["cargo"=>'Prefeito'],
            ["cargo"=>'Vice Prefeito'],
            ["cargo"=>'Vereador(a)'],

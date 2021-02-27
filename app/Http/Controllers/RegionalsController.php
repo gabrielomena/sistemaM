@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\TipoPoliticos;
+use App\Regional;
 use Illuminate\Http\Request;
 
-class TipoPoliticosController extends Controller
+class RegionalsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class TipoPoliticosController extends Controller
      */
     public function index()
     {
-        $tipo_politicos= TipoPoliticos::all();
-        return view('admin.autoridadesForm', compact('tipo_politicos'));
+        $regionals=Regional::all();
+        return view("admin.autoridades",compact('regionals'));
     }
 
     /**
@@ -42,10 +42,10 @@ class TipoPoliticosController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\TipoPoliticos  $tipoPoliticos
+     * @param  \App\Regional  $regional
      * @return \Illuminate\Http\Response
      */
-    public function show(TipoPoliticos $tipoPoliticos)
+    public function show(Regional $regional)
     {
         //
     }
@@ -53,10 +53,10 @@ class TipoPoliticosController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\TipoPoliticos  $tipoPoliticos
+     * @param  \App\Regional  $regional
      * @return \Illuminate\Http\Response
      */
-    public function edit(TipoPoliticos $tipoPoliticos)
+    public function edit(Regional $regional)
     {
         //
     }
@@ -65,10 +65,10 @@ class TipoPoliticosController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\TipoPoliticos  $tipoPoliticos
+     * @param  \App\Regional  $regional
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, TipoPoliticos $tipoPoliticos)
+    public function update(Request $request, Regional $regional)
     {
         //
     }
@@ -76,10 +76,10 @@ class TipoPoliticosController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\TipoPoliticos  $tipoPoliticos
+     * @param  \App\Regional  $regional
      * @return \Illuminate\Http\Response
      */
-    public function destroy(TipoPoliticos $tipoPoliticos)
+    public function destroy(Regional $regional)
     {
         //
     }

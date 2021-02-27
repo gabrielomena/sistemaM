@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTipoPoliticosTable extends Migration
+class CreateCargosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateTipoPoliticosTable extends Migration
      */
     public function up()
     {
-        Schema::create('tipo_politicos', function (Blueprint $table) {
+        Schema::create('cargos', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->String('cargo');
         });
@@ -26,6 +26,6 @@ class CreateTipoPoliticosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tipo_politicos');
+        Schema::dropIfExists('cargos');
     }
 }

@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class TipoPoliticos extends Model
+class Cargo extends Model
 {
     public function autoridades()
     {

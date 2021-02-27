@@ -6,11 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Autoridade extends Model
 {
-    protected $fillable=['nome','cargo','tipo_id','partido_id','liderCamara','municipio_id','email','tel'];
+    protected $fillable=['nome','cargo','cargo_id','partido_id','liderCamara','municipio_id','email','tel'];
 
-    public function tipo()
+    public function cargo()
     {
-        return $this->belongsTo('App\TipoPoliticos','tipo_id');
+        return $this->belongsTo('App\Cargo','cargo_id');
     }
 
     public function partido()
@@ -21,5 +21,9 @@ class Autoridade extends Model
     public function municipio()
     {
         return $this->belongsTo('App\Municipio','municipio_id');
+    }
+    public function regional()
+    {
+        return $this->belongsTo('App\Regional','regional_id');
     }
 }

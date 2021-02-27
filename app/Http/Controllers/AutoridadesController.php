@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Municipio;
 use App\Partido;
 use App\Autoridade;
-use App\TipoPoliticos;
+use App\Cargo;
 use Illuminate\Http\Request;
 
 class AutoridadesController extends Controller
@@ -28,10 +28,10 @@ class AutoridadesController extends Controller
      */
     public function create()
     {
-        $tipo_politicos= TipoPoliticos::all();
+        $cargos= Cargo::all();
         $partidos= Partido::all();
         $municipios= Municipio::all();
-        return view('admin.autoridadesForm', compact('tipo_politicos','partidos','municipios'));
+        return view('admin.autoridadesForm', compact('cargos','partidos','municipios'));
     }
 
     /**
@@ -63,9 +63,13 @@ class AutoridadesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(int $id)
     {
-        //
+        $cargos= Cargo::all();
+        $partidos= Partido::all();
+        $municipios= Municipio::all();
+        $autoridades= Autoridade::find($id);
+        return view('admin.autoridadesFormAlt', compact('autoridades','cargos','partidos','municipios'));
     }
 
     /**
@@ -75,9 +79,11 @@ class AutoridadesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request,int $id)
     {
-        //
+        $autoridade= Autoridade::find($id);
+        $autoridade->update($request->all());
+        return redirect()->route('autoridade.index');
     }
 
     /**

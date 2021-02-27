@@ -25,7 +25,7 @@
                         {{$a->partido->sigla}} <!--partido-->
                         </div>
                     </td>
-                    <td>{{$a->tipo->cargo}} <!--cargo-->
+                    <td>{{$a->cargo->cargo}} <!--cargo-->
                     </td>
                     <td>{{$a->municipio->nome}} <!--municipio-->
                     </td>

@@ -16,8 +16,8 @@ class CreateAutoridadesTable extends Migration
         Schema::create('autoridades', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nome');
-            $table->unsignedBigInteger('tipo_id');
-            $table->foreign('tipo_id')->references('id')->on('tipo_politicos');
+            $table->unsignedBigInteger('cargo_id');
+            $table->foreign('cargo_id')->references('id')->on('cargos');
             $table->unsignedBigInteger('partido_id');
             $table->foreign('partido_id')->references('id')->on('partidos');
             $table->unsignedBigInteger('municipio_id');

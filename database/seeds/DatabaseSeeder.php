@@ -12,9 +12,10 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call(UserSeeder::class);
+        $this->call(RegionalSeeder::class);
         $this->call(MunicipiosSeeder::class);
         $this->call(PartidosSeeder::class);
-        $this->call(TipoPoliticosSeeder::class);
+        $this->call(CargosSeeder::class);
         $this->call(AutoridadesSeeder::class);
     }
 }
