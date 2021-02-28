@@ -12,8 +12,8 @@ class CargosSeeder extends Seeder
     public function run()
     {
         DB::table('cargos')->insert([
-           ["cargo"=>'Prefeito'],
-           ["cargo"=>'Vice Prefeito'],
+           ["cargo"=>'Prefeito(a)'],
+           ["cargo"=>'Vice Prefeito(a)'],
            ["cargo"=>'Vereador(a)'],
            ["cargo"=>'Secretário(a) de Saúde'],
            ["cargo"=>'Coordernador(a)  de Atenção Básica'],
