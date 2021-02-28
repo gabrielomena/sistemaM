@@ -31,12 +31,12 @@
                     </td>
                     <td>
                         <span class="form-inline">
-                        <a class="btn btn-primary mr-1 ml-1" title="EDITAR" href="{{route('autoridades.edit',$a)}}" role="button"><span class="fa fa-edit"></span></a>
-                            <form action="{{route('autoridades.destroy',$a)}}" method="post" class="mr-1 ml-1">
+                        <a class="btn btn-primary ml-1" title="EDITAR" href="{{route('autoridades.edit',$a)}}" role="button"><span class="fa fa-edit"></span></a>
+                            <form action="{{route('autoridades.destroy',$a)}}" method="post">
                                 @csrf
                                 @method('delete')
                                 <input type="hidden" name="id" value="${{$a->id}}">
-                                <button class="btn btn-danger" title="EXCLUIR" onclick="return confirm('Tem Certeza?')" type="submit"><span class="fa fa-trash"></span></button>
+                                <button class="btn btn-danger mr-1 ml-1" title="EXCLUIR" onclick="return confirm('Tem Certeza?')" type="submit"><span class="fa fa-trash"></span></button>
                             </form>
                             <button class="btn btn-primary" title="DETALHES" type="button" data-toggle="collapse" data-target="#expand{{$a->id}}" aria-expanded="false"><span class="fa fa-database"></span></button>
                         </span>

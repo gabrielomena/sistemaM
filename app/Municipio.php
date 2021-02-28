@@ -17,4 +17,10 @@ class Municipio extends Model
     {
         return $this->belongsTo('App\Regional','regionals_id');
     }
+
+    public function dados()
+    {
+        return $this->belongsTo('App\Dados_municipios','dados_id');
+    }
+
 }
