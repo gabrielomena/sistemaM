@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Autoridade;
-use App\Municipio;
+use App\Estado;
 use Illuminate\Http\Request;
 
-class MunicipiosController extends Controller
+class EstadoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +14,7 @@ class MunicipiosController extends Controller
      */
     public function index()
     {
-        $autoridades= Autoridade::all();
-        $municipios= Municipio::all();
-        return view("admin.municipios", compact('municipios','autoridades'));
+        //
     }
 
     /**
@@ -27,7 +24,7 @@ class MunicipiosController extends Controller
      */
     public function create()
     {
-
+        //
     }
 
     /**
@@ -38,16 +35,16 @@ class MunicipiosController extends Controller
      */
     public function store(Request $request)
     {
-
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Estado  $estado
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Estado $estado)
     {
         //
     }
@@ -55,10 +52,10 @@ class MunicipiosController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Estado  $estado
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Estado $estado)
     {
         //
     }
@@ -67,10 +64,10 @@ class MunicipiosController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Estado  $estado
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Estado $estado)
     {
         //
     }
@@ -78,11 +75,11 @@ class MunicipiosController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Estado  $estado
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Municipio $municipio)
+    public function destroy(Estado $estado)
     {
-
+        //
     }
 }

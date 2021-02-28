@@ -15,7 +15,7 @@
                         <div class="card" style="width: 18rem;">
                             <div class="card-body">
                                 <h5 class="card-title">MUNICÍPIOS</h5>
-                                <p class="card-text">Exibe a lista municípios.</p>
+                                <p class="card-text">Exibe as informações e a lista de municípios.</p>
                                 <a href="/municipios" class="btn btn-primary">LISTAR</a>
                             </div>
                         </div>

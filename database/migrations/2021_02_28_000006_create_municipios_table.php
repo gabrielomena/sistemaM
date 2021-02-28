@@ -18,6 +18,8 @@ class CreateMunicipiosTable extends Migration
             $table->string('nome')->unique();
             $table->unsignedBigInteger('regionals_id');
             $table->foreign('regionals_id')->references('id')->on('regionals');
+            $table->unsignedBigInteger('estado_id');
+            $table->foreign('estado_id')->references('id')->on('estados');
             $table->unsignedBigInteger('dados_id');
             $table->foreign('dados_id')->references('id')->on('dados_municipios');
             $table->timestamps();

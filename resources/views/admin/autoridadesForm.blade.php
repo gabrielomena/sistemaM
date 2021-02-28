@@ -5,13 +5,16 @@
         <div class="text-info align-text-top">
             <h1>Cadastro de Político</h1>
         </div>
-        <form method="post" action="{{route('autoridades.store')}}">
+        <form method="post" class="needs-validation" action="{{route('autoridades.store')}}">
             @csrf
-            <div class="row">
+            <div class="form-row">
                 <div class="col-sm-12">
                     <div class="form-group">
                         <label for="nome">NOME</label>
                         <input type="text" class="form-control" id="nome" name="nome" required>
+                        <div class="invalid-feedback">
+                            Inserir um nome!
+                        </div>
                     </div>
                 </div>
             </div>
@@ -29,8 +32,8 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="form-group">
-                        <label for="tipo_id">CARGO</label>
-                        <select class="form-control" id="tipo_id" name="tipo_id" required>
+                        <label for="cargo_id">CARGO</label>
+                        <select class="form-control" id="cargo_id" name="cargo_id" required>
                             <option value="" selected disabled hidden>Selecione</option>
                             @foreach($cargos as $tp)
                                 <option value="{{$tp->id}}">{{$tp->cargo}}</option>
@@ -52,11 +55,11 @@
             </div>
             <div class="form-group">
                 <label for="email">E-MAIL</label>
-                <input type="text" class="form-control" name="email" id="email" required>
+                <input type="text" class="form-control" name="email" id="email">
             </div>
             <div class="form-group">
                 <label for="tel">CONTATO</label>
-                <input type="text" class="form-control" name="tel" id="tel" required>
+                <input type="text" class="form-control" name="tel" id="tel">
             </div>
             <div class="form-group">
                 <button class="btn btn-primary" title="SALVAR" type="submit"><span class="fa fa-save"></span></button>

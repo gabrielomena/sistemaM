@@ -20,26 +20,24 @@
                     <div class="collapse" id="expander{{$p->id}}">
                         <div class="card card-body">
                             <div class="row">
-                                <div class="col-sm-6">
-                                    Área Territorial km²: {{$p->dados->area_territorial}}
-                                    Densidade Demográfica: {{$p->dados->densidade_demografica}}
+                                <div class="col-sm-5">
+                                    <i class="fa fa-area-chart "></i> Área Territorial km²: {{$p->dados->area_territorial}}<br>
+                                    <i class="fa fa-globe"></i> Densidade Demográfica: {{$p->dados->densidade_demografica}}<br>
                                 </div>
-                                <div class="col-sm-6">
-                                    Regional: {{$p->regional->nome}}<br>
-                                    PIB Percapita: {{$p->dados->pib_percapita}}
+                                <div class="col-sm-4">
+                                    <i class="fa fa-dollar"></i> PIB: {{$p->dados->pib_percapita}}<br>
+                                    <i class="fa fa-group"></i> População Estimada: {{$p->dados->populacao_estimada}}<br>
+                                    <i class="fa fa-arrow-up"></i> IDH: {{$p->dados->idh}}
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    População Estimada: {{$p->dados->populacao_estimada}}<br>
-                                    IDH: {{$p->dados->idh}}
+                                <div class="col-sm-3">
+                                    <i class="fa fa-map-marker"></i> Regional: {{$p->regional->nome}}<br>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        @endforeach
+     @endforeach
     </div>
 @endsection
 

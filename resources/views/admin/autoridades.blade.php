@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <div class="text-info">
-            <h1>Lista de Políticos Cadastrados</h1>
+            <h1>Lista de Autoridades Cadastrados</h1>
         </div>
         <div class="text-right mb-2">
             <a class="btn btn-primary" href="{{route('autoridades.create')}}" role="button">ADICIONAR</a>
@@ -19,7 +19,7 @@
             @foreach($autoridades as $a)
                 <tr>
                     <td colspan="2">{{$a->nome}} <!--nome-->
-                        <div class="collapse" id="expand{{$a->id}}">
+                        <div class="collapse text-info" id="expand{{$a->id}}">
                         {{$a->email}}<br> <!--email-->
                         {{$a->tel}}<br> <!--tel-->
                         {{$a->partido->sigla}} <!--partido-->
