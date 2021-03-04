@@ -20,8 +20,9 @@ class MunicipiosController extends Controller
         $autoridade=Autoridade::all();
         $municipio= Municipio::all();
         $regional=Regional::all();
-        $cargo=Cargo::all();
-        return view("admin.municipios", compact('autoridade','municipio','regional','cargo'));
+
+        // dd($prefeito);
+        return view("admin.municipios", compact('autoridade','municipio','regional'));
     }
 
     /**
