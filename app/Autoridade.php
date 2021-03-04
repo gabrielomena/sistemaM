@@ -6,24 +6,25 @@ use Illuminate\Database\Eloquent\Model;
 
 class Autoridade extends Model
 {
-    protected $fillable=['nome','cargo','cargo_id','partido_id','liderCamara','municipio_id','email','tel'];
+    protected $fillable=['nome','cargo_id','partido_id','municipio_id','liderCamara','email','tel'];
 
     public function cargo()
     {
-        return $this->belongsTo('App\Cargo','cargo_id');
+        return $this->belongsTo('App\Cargo','cargo_id','id');
     }
 
     public function partido()
     {
-        return $this->belongsTo('App\Partido','partido_id');
+        return $this->belongsTo('App\Partido','partido_id','id');
     }
 
     public function municipio()
     {
-        return $this->belongsTo('App\Municipio','municipio_id');
+        return $this->belongsTo('App\Municipio','municipio_id','id');
     }
+
     public function regional()
     {
-        return $this->belongsTo('App\Regional','regional_id');
+        return $this->belongsTo('App\Regional');
     }
 }

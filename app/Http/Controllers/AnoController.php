@@ -2,13 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Autoridade;
-use App\Municipio;
-use App\Regional;
-use App\Cargo;
+use App\Ano;
 use Illuminate\Http\Request;
 
-class MunicipiosController extends Controller
+class AnoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,11 +14,8 @@ class MunicipiosController extends Controller
      */
     public function index()
     {
-        $autoridade=Autoridade::all();
-        $municipio= Municipio::all();
-        $regional=Regional::all();
-        $cargo=Cargo::all();
-        return view("admin.municipios", compact('autoridade','municipio','regional','cargo'));
+        $anos= Ano::all();
+        return  view('admin.hospitalsForm',compact('anos'));
     }
 
     /**
@@ -31,7 +25,7 @@ class MunicipiosController extends Controller
      */
     public function create()
     {
-
+        //
     }
 
     /**
@@ -42,16 +36,16 @@ class MunicipiosController extends Controller
      */
     public function store(Request $request)
     {
-
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Ano  $ano
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Ano $ano)
     {
         //
     }
@@ -59,10 +53,10 @@ class MunicipiosController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Ano  $ano
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Ano $ano)
     {
         //
     }
@@ -71,10 +65,10 @@ class MunicipiosController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Ano  $ano
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Ano $ano)
     {
         //
     }
@@ -82,11 +76,11 @@ class MunicipiosController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Ano  $ano
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Municipio $municipio)
+    public function destroy(Ano $ano)
     {
-
+        //
     }
 }

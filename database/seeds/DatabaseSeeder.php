@@ -19,5 +19,6 @@ class DatabaseSeeder extends Seeder
         $this->call(PartidosSeeder::class);
         $this->call(CargosSeeder::class);
         $this->call(AutoridadesSeeder::class);
+        $this->call(AnoSeeder::class);
     }
 }

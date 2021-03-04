@@ -14,7 +14,8 @@ class RegionalsController extends Controller
      */
     public function index()
     {
-        $regionals=Regional::all();
+/*        $regionals=Regional::all();*/
+        $regionals=Regional::with('estado')->get();
         return view("admin.autoridades",compact('regionals'));
     }
 

@@ -6,14 +6,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class Regional extends Model
 {
-    protected $fillable=['nome','sigla'];
+    protected $fillable=['nome','sigla','estado_id'];
 
     public function municipio()
     {
-        return $this->hasMany(Municipio::class);
+        return $this->hasMany('App\Municipio');
     }
     public function autoridade()
     {
-        return $this->hasMany(Autoridade::class);
+        return $this->hasMany('App\Autoridade');
+    }
+    public function estado()
+    {
+        return $this->belongsTo('App\Estado','estado_id');
     }
 }

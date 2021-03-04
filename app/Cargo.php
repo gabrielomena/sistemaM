@@ -6,8 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Cargo extends Model
 {
-    public function autoridades()
+    protected $fillable=['cargo'];
+
+    public function autoridade()
     {
-        return $this->hasMany(Autoridade::class);
+        return $this->hasMany('App\Autoridade');
    }
 }

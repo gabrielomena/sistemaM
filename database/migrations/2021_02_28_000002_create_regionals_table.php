@@ -17,6 +17,8 @@ class CreateRegionalsTable extends Migration
             $table->bigIncrements('id');
             $table->string('nome');
             $table->string('sigla');
+            $table->unsignedBigInteger('estado_id');
+            $table->foreign('estado_id')->references('id')->on('estados');
             $table->timestamps();
         });
     }
