@@ -25,6 +25,7 @@ Route::resources([
     'partidos'=>'PartidosController',
     'municipios'=>'MunicipiosController',
     'autoridades'=>'AutoridadesController',
-    'regionals'=>'RegionalsController'
+    'regionals'=>'RegionalsController',
+    'hospitals'=>'HospitalController'
 ]);
 
