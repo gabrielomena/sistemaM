@@ -18,10 +18,13 @@ class CreateAutoridadesTable extends Migration
             $table->string('nome');
             $table->unsignedBigInteger('cargo_id');
             $table->foreign('cargo_id')->references('id')->on('cargos');
+
             $table->unsignedBigInteger('partido_id');
             $table->foreign('partido_id')->references('id')->on('partidos');
+
             $table->unsignedBigInteger('municipio_id');
             $table->foreign('municipio_id')->references('id')->on('municipios');
+            
             $table->boolean('liderCamara')->default(false);
             $table->string('email')->nullable();
             $table->string('tel',40)->nullable();
