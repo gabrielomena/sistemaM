@@ -53,7 +53,7 @@
 
                                         @foreach ($a->autoridade as $auto)
                                         <div class="col-sm-5">
-                                            {{$auto->cargo->cargo}} : {{$auto->nome}}
+                                            {{$auto->cargo->cargo}}: {{$auto->nome}}
                                         </div>
                                         @endforeach
                                         <div class="col-sm-4">
